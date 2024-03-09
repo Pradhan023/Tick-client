@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bgimg{
+    /* background-image: url("https://newsonthesnow.com/news/wp-content/uploads/2020/01/Orographic_lift_mountains_sunset_shutterstock_hero_.jpg"); */
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.homebg{
+    background-image: url("https://blog.ticktick.com/wp-content/uploads/2021/02/Google-Assistant-1536x864.png");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
