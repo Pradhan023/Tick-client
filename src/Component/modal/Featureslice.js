@@ -6,7 +6,7 @@ import axios from "axios";
 export const addTask = createAsyncThunk("addtask",async(obj)=>{
     const accesstoken = localStorage.getItem("accesstoken");
     try{
-        const data = await axios.post("https://tick-api.onrender.com/addData",obj,{
+        const data = await axios.post("https://ticktick-api.onrender.com/addData",obj,{
             headers:{
                 Authorization:"Bearer " +accesstoken
             }
@@ -22,7 +22,7 @@ export const addTask = createAsyncThunk("addtask",async(obj)=>{
 export const getTask = createAsyncThunk("gettask",async()=>{
     const accesstoken = localStorage.getItem("accesstoken");
     try{
-        const data = await axios.get("https://tick-api.onrender.com/getdata",{
+        const data = await axios.get("https://ticktick-api.onrender.com/getdata",{
             headers:{
                 Authorization:"Bearer " +accesstoken
             }
@@ -38,7 +38,7 @@ export const getTask = createAsyncThunk("gettask",async()=>{
 export const updateTask = createAsyncThunk("updatetask",async(obj)=>{
     const accesstoken = localStorage.getItem("accesstoken");
     try{
-        const data = await axios.post("https://tick-api.onrender.com/updatedata",obj,{
+        const data = await axios.post("https://ticktick-api.onrender.com/updatedata",obj,{
             headers:{
                 Authorization:"Bearer " +accesstoken
             }
@@ -54,7 +54,7 @@ export const updateTask = createAsyncThunk("updatetask",async(obj)=>{
 export const deleteTask = createAsyncThunk("deletetask",async(i)=>{
     const accesstoken = localStorage.getItem("accesstoken");
     try{
-        const data = await axios.post("https://tick-api.onrender.com/delete",{in_id:i},{
+        const data = await axios.post("https://ticktick-api.onrender.com/delete",{in_id:i},{
             headers:{
                 Authorization:"Bearer " +accesstoken
             }

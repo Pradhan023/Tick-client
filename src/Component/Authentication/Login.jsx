@@ -90,7 +90,7 @@ const Login = () => {
         email: email.current.value,
         password: password.current.value,
       };
-      const res = await axios.post("https://tick-api.onrender.com/login", obj);
+      const res = await axios.post("https://ticktick-api.onrender.com/login", obj);
       // console.log(res.data);
 
       if (res.data.msg == "User is Successfully Login") {
