@@ -48,11 +48,12 @@ const Ticktask = () => {
       dispatch(addTask(obj));
       setExp(!exp);
       taskref.current.value = "";
+      if (Data.data?.msg == "Added") {
+        toast.success(Data.data.msg);
+      }
     }
   };
-  if (Data.data?.msg == "Added") {
-    toast.success(Data.data.msg);
-  }
+  
 
   return (
     <div className="flex flex-col  items-center relative pt-3">
@@ -78,7 +79,7 @@ const Ticktask = () => {
       </div>
       {/* list */}
       <div className="w-5/6 lg:w-1/2 mt-3">
-        <Lists />
+        <Lists update={exp}/>
       </div>
       <ToastContainer />
     </div>

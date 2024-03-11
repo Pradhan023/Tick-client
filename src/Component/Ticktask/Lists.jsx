@@ -12,7 +12,7 @@ import { deleteTask, getTask, updateTask } from "../modal/Featureslice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Lists = () => {
+const Lists = ({update}) => {
   const Data = useSelector((state) => state.addlist);
   //   console.log(Data);
   const dispatch = useDispatch();
@@ -42,12 +42,13 @@ const Lists = () => {
 
   useEffect(() => {
     dispatch(getTask());
-  }, [exp,accesstoken]);
+  }, [exp,accesstoken,update]);
 
+  // updatefunction
   const handleUpdate = (e) => {
     e.preventDefault();
     dispatch(updateTask(input));
-    setExp(!exp);
+    dispatch(getTask());
     setPop(!pop);
   };
 
