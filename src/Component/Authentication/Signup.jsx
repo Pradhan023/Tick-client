@@ -107,7 +107,7 @@ const Signup = () => {
         email: email.current.value,
         password: password.current.value,
       };
-      const res = await axios.post("https://ticktick-api.onrender.com/register", obj);
+      const res = await axios.post("https://tick-tick-api.vercel.app/register", obj);
       console.log(res.data);
       if (res.data.msg == "User is Successfully Registered") {
         toast.success("User is Successfully Registered");
